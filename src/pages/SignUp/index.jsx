@@ -33,7 +33,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:5000/api/client/sign-up";
+			const url = `${process.env.TIMEKEEPRAPI}/client/sign-up`;
 			const { data: res } = await axios.post(url, data)
 
 			navigate("/login");
