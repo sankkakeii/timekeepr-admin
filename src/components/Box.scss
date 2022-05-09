@@ -1,0 +1,152 @@
+.box {
+  width: 82%;
+  display: flex;
+  position: relative;
+  height: 130px;
+}
+hr {
+  position: -webkit-sticky;
+  position: sticky;
+  float: left;
+  width: 65%;
+  margin-top: 50px;
+  border-top: 3px solid rgb(42, 176, 221);
+}
+
+.hr span {
+  font-weight: normal;
+  color: rgb(165, 162, 162);
+}
+.report {
+  font-size: 15px;
+  padding: 20px;
+  margin: 20px 60px 0 0;
+  float: right;
+  border: 2px solid rgb(165, 162, 162);
+}
+.total {
+  font-size: 30px;
+  background-color: rgb(255, 208, 0);
+  color: white;
+  padding: 15px 50px;
+  margin: 20px;
+  border-radius: 7px;
+  width: 230px;
+  align-items: center;
+  text-align: center;
+}
+.early {
+  font-size: 30px;
+  background-color: rgba(67, 179, 45, 0.89);
+  color: white;
+  padding: 15px 50px;
+  margin: 20px;
+  border-radius: 7px;
+  width: 230px;
+  align-items: center;
+  text-align: center;
+}
+.late {
+  font-size: 30px;
+  background-color: rgba(9, 32, 105, 0.89);
+  color: white;
+  padding: 15px 50px;
+  margin: 20px;
+  border-radius: 7px;
+  width: 230px;
+  align-items: center;
+  text-align: center;
+}
+.absent {
+  font-size: 30px;
+  background-color: rgba(7, 5, 5, 0.788);
+  color: white;
+  padding: 15px 50px;
+  margin: 20px;
+  border-radius: 7px;
+  width: 230px;
+  height: px;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 50px) {
+  .box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 100px auto;
+    padding: auto;
+  }
+  .hr {
+    display: none;
+  }
+  .report {
+    top: 0%;
+    position: relative;
+    padding: 20px 10px;
+    margin: 120px 0 0 20px;
+    float: left;
+  }
+  .total,
+  .asset,
+  .active,
+  .payment {
+    padding: 15px 30px;
+    width: 170px;
+    margin: 12px;
+  }
+  @media screen and (min-width: 500px) {
+    .total,
+    .asset,
+    .active,
+    .payment {
+      padding: 15px 40px;
+      width: 230px;
+      margin: 15px;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .box {
+      width: 80%;
+      display: flex;
+      position: relative;
+      height: 120px;
+    }
+    .total,
+    .asset,
+    .active,
+    .payment {
+      padding: 20px 5px;
+      width: 200px;
+      margin: 10px;
+    }
+    .hr {
+      display: none;
+    }
+    .report {
+      font-size: 15px;
+      padding: 25px 10px;
+      margin: 30px 20px 20px 0;
+      float: right;
+      border: 2px solid rgb(165, 162, 162);
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .total,
+    .asset,
+    .active,
+    .payment {
+      padding: 20px 40px;
+      width: 250px;
+      margin: 10px;
+    }
+    .report {
+      padding: 20px 10px;
+      margin: 15px 20px 0px 0;
+    }
+    .hr {
+      display: block;
+    }
+  }
+}

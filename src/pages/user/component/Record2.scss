@@ -1,0 +1,31 @@
+.records dl {
+  display: flex;
+  color: #416492;
+  min-width: 350px;
+}
+#one {
+  margin-top: 5px;
+  padding-right: 50px;
+}
+#two {
+  margin-top: 5px;
+  padding-right: 70px;
+}
+#three {
+  margin-top: 5px;
+  padding-right: 137px;
+}
+#four {
+  margin-top: 5px;
+  padding-right: 120px;
+}
+.records button {
+  padding: 12px 25px;
+  border-radius: 7px;
+  color: #416492;
+  border: none;
+  box-shadow: 1px 1px 2px 1px rgb(173, 168, 168);
+}
+.records img {
+  margin: 10px 0 10px 10px;
+}

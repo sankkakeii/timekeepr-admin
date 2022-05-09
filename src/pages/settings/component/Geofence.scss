@@ -1,0 +1,208 @@
+/*.ant-switch-handle {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  width: 50px;
+  height: 46px;
+  transition: all 0.2s ease-in-out;
+}
+.ant-switch {
+  height: 50px;
+  min-width: 50px;
+  width: 120px;
+  border-radius: 12px;
+  position: relative;
+}
+#enable {
+  font-size: 23px;
+  font-weight: 400;
+  padding-left: 40px;
+  opacity: 0.8;
+}
+.ant-switch-handle::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 2px 4px 0 rgb(0 35 11 / 20%);
+  transition: all 0.2s ease-in-out;
+  content: "";
+}
+.ant-click-animating-node {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 #1890ff;
+  box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
+  opacity: 0.2;
+  -webkit-animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1),
+    waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
+  animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1),
+    waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  content: "";
+  pointer-events: none;
+}
+/*comment*/
+/*.ant-switch {
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 44px;
+  height: 22px;
+  line-height: 22px;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ant-switch {
+  height: 50px;
+  min-width: 50px;
+  width: 120px;
+  border-radius: 12px;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+input {
+  overflow: visible;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+a,
+area,
+button,
+[role="button"],
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ant-switch-handle::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 2px 4px 0 rgb(0 35 11 / 20%);
+  transition: all 0.2s ease-in-out;
+  content: "";
+}
+.ant-switch-checked {
+  background-color: #1890ff;
+}
+.ant-switch-checked .ant-switch-inner {
+  margin: 0 25px 0 7px;
+}
+.ant-switch-inner {
+  display: block;
+  margin: 0 7px 0 25px;
+  color: #fff;
+  font-size: 12px;
+  transition: margin 0.2s;
+}
+.ant-click-animating-node {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 #1890ff;
+  box-shadow: 0 0 0 0 var(--antd-wave-shadow-color);
+  opacity: 0.2;
+  -webkit-animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1),
+    waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
+  animation: fadeEffect 2s cubic-bezier(0.08, 0.82, 0.17, 1),
+    waveEffect 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  content: "";
+  pointer-events: none;
+}
+.ant-switch:focus:hover {
+  box-shadow: none;
+}
+.ant-switch:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px rgb(0 0 0 / 10%);
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+*/
+.toggle {
+  padding: 20px;
+  display: flex;
+}
+#enable {
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 30px;
+  opacity: 0.8;
+}
+.react-switch-bg {
+  height: 35px;
+  width: 35px;
+}
+
+@media screen and (min-width: 1000px) {
+  .Geofence {
+    padding-top: 20px;
+  }
+  #toggle {
+    margin-left: -50px;
+  }
+}

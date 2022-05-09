@@ -1,0 +1,189 @@
+.container {
+  width: 85%;
+  padding: 10px;
+  margin-left: 50px;
+  position: relative;
+  align-items: center;
+}
+.container h2 {
+  margin-left: 15%;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.rect {
+  display: flex;
+  position: relative;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.react-calendar {
+  float: right;
+  margin-right: -90px;
+  margin-top: -20px;
+  width: 450px;
+  max-width: 100%;
+  background-color: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+.react-calendar__navigation button {
+  color: rgba(9, 32, 105, 0.89);
+  padding: 0%;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #f8f8fa;
+}
+.react-calendar__navigation button[disabled] {
+  background-color: #f0f0f0;
+}
+abbr[title] {
+  text-decoration: none;
+}
+/* .react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+ } */
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #f8f8fa;
+  color: rgba(9, 32, 105, 0.89);
+  border-radius: 6px;
+}
+.react-calendar__tile--now {
+  background: rgba(9, 32, 105, 0.89);
+  border-radius: 6px;
+  font-weight: bold;
+  color: rgba(9, 32, 105, 0.89);
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: rgba(9, 32, 105, 0.89);
+  border-radius: 6px;
+  font-weight: bold;
+  color: rgba(9, 32, 105, 0.89);
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #f8f8fa;
+}
+.react-calendar__tile--active {
+  background: rgba(9, 32, 105, 0.89);
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: rgba(9, 32, 105, 0.89);
+  color: white;
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #f8f8fa;
+}
+.react-calendar__tile--range {
+  background: #f8f8fa;
+  color: rgba(9, 32, 105, 0.89);
+  border-radius: 0;
+}
+.react-calendar__tile--rangeStart {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background: rgba(9, 32, 105, 0.89);
+  color: white;
+}
+.react-calendar__tile--rangeEnd {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: rgba(9, 32, 105, 0.89);
+  color: white;
+}
+
+@media screen and (min-width: 50px) {
+  .container {
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+  }
+  .container h2 {
+    margin: 0;
+    font-size: 20px;
+    padding: 20px 0;
+    text-align: center;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+  .rect {
+    max-width: 100%;
+    width: 350px;
+    display: block;
+    margin: 0;
+    padding: 0 0px 0px 0;
+    box-sizing: border-box;
+  }
+  .react-calendar {
+    width: 350px;
+    margin: 20px 10px 20px 10px;
+    background-color: #fff;
+  }
+}
+@media screen and (min-width: 500px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .react-calendar {
+    padding: 0 20px;
+  }
+  @media screen and (min-width: 700px) {
+    .container {
+      width: 80%;
+      margin-top: -20px;
+    }
+    .container h2 {
+      font-size: 25px;
+      opacity: 0.8;
+    }
+    .flex {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 0;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .container {
+      margin-top: -110px;
+      overflow: hidden;
+    }
+    .flex {
+      margin-top: -30px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+form {
+  margin: 0px 0 0 20px;
+  cursor: pointer;
+  display: block;
+}
+input {
+  color: #b8d5ff;
+  font-size: 14px;
+  width: 85%;
+  padding: 20px 40px 30px 15px;
+  margin: 10px 0;
+  border: none;
+  box-shadow: 1px 1px 2px 1px rgb(173, 168, 168);
+}
+.ist {
+  margin: 20px 0 0 30px;
+  float: left;
+  width: 41%;
+}
+.second {
+  margin: 20px 0 0 0px;
+  float: right;
+  width: 41%;
+}
+form h3 {
+  font-weight: normal;
+  font-size: 20px;
+  opacity: 0.5;
+  padding: 5px 0;
+}
+@media screen and (min-width: 0px) {
+  input {
+    font-size: 12px;
+    width: 90%;
+    padding: 0px 15px 30px 15px;
+    margin: 20px 0 10px 0;
+  }
+  form {
+    margin: 100px 0 0px 0px;
+  }
+  @media screen and (min-width: 0px) {
+    form {
+      margin: 0px 0 0 20px;
+      cursor: pointer;
+      flex-direction: column-reverse;
+    }
+  }
+}

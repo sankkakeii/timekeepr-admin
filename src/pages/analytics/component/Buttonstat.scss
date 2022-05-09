@@ -1,0 +1,49 @@
+.stats {
+  width: 70%;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+#stat {
+  margin-top: 30px;
+  color: #416492;
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: none;
+}
+#stat:hover {
+  background-color: #416492;
+  color: whitesmoke;
+}
+@media screen and (min-width: 0px) {
+  .stats {
+    width: 100%;
+    margin-left: 50%;
+  }
+  #stat {
+    margin: 200px 20px 100px 20px;
+    padding: 30px 70px;
+    border-radius: 15px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 700px) {
+  .stats {
+    width: 85%;
+    margin-left: 0;
+  }
+
+  #stat {
+    margin: 70px 20px 20px 10px;
+    padding: 30px 50px;
+  }
+  @media screen and (min-width: 1000px) {
+    #stat {
+      margin: 50px 20px 10px 10px;
+      padding: 30px 50px;
+    }
+  }
+}
