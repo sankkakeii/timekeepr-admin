@@ -37,13 +37,13 @@ class MapApp extends Component {
 
     var polygonCoordsList = [];
 
-    var contentString2;
+    var contentString;
     
     // Iterate over the polygonBounds vertices.
     polygonBounds.forEach(function (xy, i) {
       // longitude before latitude
-      contentString2 = `(${xy.lng()}, ${xy.lat()})`;
-      polygonCoordsList.push(contentString2);
+      contentString = `(${xy.lng()}, ${xy.lat()})`;
+      polygonCoordsList.push(contentString);
     });
 
     // convert coordinates to latlng[]...solution by Joshua DeFord on stackOverflow
@@ -56,8 +56,11 @@ class MapApp extends Component {
     ${polygon_coords.replace(/\)/g, "]").replace(/\(/g, "[")}]`;
     // console.log(`Your json array: \n${jsonArray}\n`);
 
+    // parse the coordinates list as a json array
     const parsedCoords = JSON.parse(jsonArray);
+    // 
     this.fenceCoords = parsedCoords;
+    // send coordinates data to the backend api as props
     this.props.func(this.fenceCoords)
   }
 
@@ -95,10 +98,10 @@ class MapApp extends Component {
       lastFetched: position.timestamp,
     });
 
-    this.checkGeofence();
+    this.checkGeoFence();
   }
 
-  checkGeofence() {
+  checkGeoFence() {
     if (!this.state.fence) {
       this.setState({
         insideFence: false,
@@ -130,7 +133,7 @@ class MapApp extends Component {
       }),
       
     });
-    this.checkGeofence();
+    this.checkGeoFence();
   }
   
 

@@ -34,7 +34,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "react-dotenv && react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "serve": "react-dotenv && serve build",
     "heroku-postbuild": "npm run build"
