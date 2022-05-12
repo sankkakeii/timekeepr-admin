@@ -4,19 +4,21 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 
+
 import {
 	FormColumn,
 	FormWrapper,
 	FormInput,
 	FormSection,
 	FormRow,
-	FormLabel,
-	FormInputRow,
-	FormMessage,
+	// FormLabel,
+	// FormInputRow,
+	// FormMessage,
 	FormButton,
 	FormTitle,
 } from './FormStyles';
 import { Container } from './globalStyles';
+
 
 
 axios.defaults.withCredentials = true;
@@ -33,7 +35,9 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = `${process.env.TIMEKEEPRAPI}/client/login`;
+			console.log(process.env);
+			const url = `${process.env.REACT_APP_TIMEKEEPR_API}/client/login`;
+			console.log(url);
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.token)
 			navigate("/dashboard");

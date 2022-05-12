@@ -22,9 +22,9 @@ const Details = (props) => {
   const handleSubmit = async (e) => {
 		e.preventDefault();
     try {
-			const url = "http://localhost:5000/api/client/add-location";
+			const url = `${process.env.REACT_APP_TIMEKEEPR_API}/client/add-location`;
 
-			
+			console.log(timeValue)
       timeAndLocationData.clockInTime = timeValue + ':00';
 
 			await axios.put(url, timeAndLocationData, {withCredentials:true});

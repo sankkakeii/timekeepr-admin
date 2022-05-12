@@ -77,8 +77,7 @@ const AddUserForm = () => {
             <FormTitle>Add User</FormTitle>
             <FormWrapper onSubmit={handleSubmit}>
               <div className="ist">
-                <label for="FirstName"></label>
-                {" "}
+                <label for="FirstName"></label>{" "}
                 <FormInput
                   type="text"
                   placeholder="First Name"
@@ -88,18 +87,18 @@ const AddUserForm = () => {
                   value={data.companyName}
                   required
                 ></FormInput>
-        
-                <label for="Role"></label>
+
+                <label for="LastName"></label>
                 <FormInput
                   type="text"
-                  placeholder="Role"
-                  name="role"
-                  id="role"
+                  placeholder="Last Name"
+                  name="lastName"
+                  id="lastName"
                   onChange={handleChange}
                   value={data.companyName}
                   required
                 ></FormInput>
- 
+                
                 <label for="Email"></label>
                 <FormInput
                   type="text"
@@ -113,17 +112,16 @@ const AddUserForm = () => {
               </div>
 
               <div className="second">
-                <label for="LastName"></label>
+                <label for="Role"></label>
                 <FormInput
                   type="text"
-                  placeholder="Last Name"
-                  name="lastName"
-                  id="lastName"
+                  placeholder="Role"
+                  name="role"
+                  id="role"
                   onChange={handleChange}
                   value={data.companyName}
                   required
                 ></FormInput>
- 
 
                 <label for="Phone number"></label>
                 <FormInput

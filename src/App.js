@@ -10,6 +10,7 @@ import Notifications from "./pages/notifications/Notifications";
 import Settings from "./pages/settings/Settings";
 import "../src/index.css";
 
+
 function App() {
   const user = localStorage.getItem("token");
   return (
@@ -19,7 +20,6 @@ function App() {
         {user && <Route path="/dashboard" exact element={<Dashboard />} />}
         <Route exact path={"/login"} element={<Login />} />
         <Route exact path={"/signup"} element={<Signup />} />
-        {/* <Route exact path={"/dashboard"} element={<Dashboard />} /> */}
         <Route exact path={"/add-user"} element={<Add />} />
         <Route exact path={"/user"} element={<User />} />
         <Route exact path={"/analytics"} element={<Analytics />} />

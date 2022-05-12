@@ -33,7 +33,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = `${process.env.TIMEKEEPRAPI}/client/sign-up`;
+			const url = `${process.env.REACT_APP_TIMEKEEPR_API}/client/sign-up`;
 			const { data: res } = await axios.post(url, data)
 
 			navigate("/login");
