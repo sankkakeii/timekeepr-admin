@@ -47,7 +47,7 @@ const AddUserForm = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:5000/api/client/add-user";
+			const url = `${process.env.REACT_APP_TIMEKEEPR_API}/client/add-user`;
 
       console.log(data)
 			await axios.put(url, data);
