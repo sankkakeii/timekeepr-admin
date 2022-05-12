@@ -41,7 +41,7 @@ const Details = (props) => {
   }
 
   return (
-    <div className="alldetails">
+    <div className="all-details">
       <div className="details">
         <h1>Location Details</h1>
         <MapApp func={pullDataFromMapComponent} />
@@ -53,7 +53,7 @@ const Details = (props) => {
         </form>
       </div>
 
-      <div className="rightdetails">
+      <div className="right-details">
         <h2>Clock in Time Limit</h2>
         <Clock />
       </div>

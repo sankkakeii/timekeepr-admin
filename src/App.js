@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/index";
-import Signup from "./pages/SignUp/index";
+import SignUp from "./pages/SignUp/index";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Add from "./pages/add/Add";
 import User from "./pages/user/User";
@@ -19,7 +19,7 @@ function App() {
       <Routes>
         {user && <Route path="/dashboard" exact element={<Dashboard />} />}
         <Route exact path={"/login"} element={<Login />} />
-        <Route exact path={"/signup"} element={<Signup />} />
+        <Route exact path={"/sign-up"} element={<SignUp />} />
         <Route exact path={"/add-user"} element={<Add />} />
         <Route exact path={"/user"} element={<User />} />
         <Route exact path={"/analytics"} element={<Analytics />} />

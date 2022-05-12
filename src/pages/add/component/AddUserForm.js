@@ -10,9 +10,9 @@ import {
 	FormInput,
 	FormSection,
 	FormRow,
-	FormLabel,
-	FormInputRow,
-	FormMessage,
+	// FormLabel,
+	// FormInputRow,
+	// FormMessage,
 	FormButton,
 	FormTitle,
 } from './FormStyles';
@@ -49,7 +49,6 @@ const AddUserForm = () => {
 		try {
 			const url = "http://localhost:5000/api/client/add-user";
 
-      // const token = localStorage.getItem("token");
       console.log(data)
 			await axios.put(url, data);
 
@@ -64,10 +63,10 @@ const AddUserForm = () => {
 		}
 	};
 
-  const messageVariants = {
-		hidden: { y: 30, opacity: 0 },
-		animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
-	};
+  // const messageVariants = {
+	// 	hidden: { y: 30, opacity: 0 },
+	// 	animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
+	// };
 
   return (
     <FormSection>
@@ -98,7 +97,7 @@ const AddUserForm = () => {
                   value={data.companyName}
                   required
                 ></FormInput>
-                
+
                 <label for="Email"></label>
                 <FormInput
                   type="text"

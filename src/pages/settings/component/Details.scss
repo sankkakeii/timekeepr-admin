@@ -1,4 +1,4 @@
-.alldetails {
+.all-details {
   box-sizing: border-box;
   width: 85%;
   display: flex;
@@ -48,18 +48,18 @@
   border-radius: 5px;
   font-size: 14px;
 }
-.rightdetails {
+.right-details {
   width: 50%;
   position: relative;
 }
-.rightdetails h2 {
+.right-details h2 {
   opacity: 0.7;
   font-size: 25px;
   padding: 53px 0 10px 0;
   margin-left: -15px;
 }
 @media screen and (min-width: 0px) {
-  .alldetails {
+  .all-details {
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -80,20 +80,20 @@
   .details textarea {
     width: 100%;
   }
-  .rightdetails {
+  .right-details {
     width: 100%;
   }
-  .rightdetails h2 {
+  .right-details h2 {
     padding: 53px 0 10px 0;
     margin-left: 20px;
   }
 }
 @media screen and (min-width: 700px) {
-  .alldetails {
+  .all-details {
     width: 85%;
     height: 100%;
   }
-  .rightdetails h2 {
+  .right-details h2 {
     padding: 25px 0 10px 0;
     margin-left: 20px;
   }
@@ -102,12 +102,12 @@
   }
 }
 @media screen and (min-width: 1000px) {
-  .alldetails {
+  .all-details {
     display: flex;
     width: 85%;
     height: 100%;
   }
-  .rightdetails h2 {
+  .right-details h2 {
     padding: 25px 0 10px 0;
     margin-left: 20px;
   }
@@ -115,7 +115,7 @@
     height: 170px;
   }
 
-  .rightdetails {
+  .right-details {
     margin: 0 0 150px 50px;
   }
 }
