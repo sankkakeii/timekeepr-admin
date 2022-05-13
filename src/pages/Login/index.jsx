@@ -36,7 +36,7 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			console.log(process.env);
-			const url = `${process.env.REACT_APP_TIMEKEEPR_API}/client/login`;
+			const url = `${process.env.REACT_APP_TIMEKEEPR_CORS}${process.env.REACT_APP_TIMEKEEPR_API}/client/login`;
 			console.log(url);
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.token)
