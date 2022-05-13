@@ -36,8 +36,15 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			const url = `${process.env.REACT_APP_TIMEKEEPR_CORS}${process.env.REACT_APP_TIMEKEEPR_API}/client/login`;
-			console.log(url);
-			const { data: res } = await axios.post(url, data);
+			let config = {
+				"headers": { 
+					'Content-Type': 'application/json',
+					'Accept': 'application/json',
+					'Authorization': 'Bearer token',
+					'Origin': 'https://timekeepr-admin.herokuapp.com'
+				}
+			};
+			const { data: res } = await axios.post(url, data, config)
 			localStorage.setItem("token", res.token)
 			navigate("/dashboard");
 
