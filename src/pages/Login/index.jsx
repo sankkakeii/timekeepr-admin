@@ -35,7 +35,7 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = `${process.env.REACT_APP_TIMEKEEPR_CORS}${process.env.REACT_APP_TIMEKEEPR_API}/client/login`;
+			const url = `${process.env.REACT_APP_TIMEKEEPR_API}/client/login`;
 			let config = {
 				"headers": { 
 					'Content-Type': 'application/json',
