@@ -67,7 +67,8 @@
   },
   "react-dotenv": {
     "whitelist": [
-      "TIMEKEEPR_API"
+      "TIMEKEEPR_API",
+      "REACT_APP_TIMEKEEPR_CORS"
     ]
   }
 }
