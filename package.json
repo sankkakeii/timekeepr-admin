@@ -70,5 +70,6 @@
       "TIMEKEEPR_API",
       "REACT_APP_TIMEKEEPR_CORS"
     ]
-  }
+  },
+    "proxy":"https://timekeepr-demo-api.herokuapp.com"
 }
