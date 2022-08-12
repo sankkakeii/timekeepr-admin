@@ -4,8 +4,14 @@ import Moment from "react-moment";
 import Map from "./Map";
 import "./App.css";
 
+import GooglePlacesAutocomplete from 'react-places-autocomplete';
+import {
+  geocodeByAddress,
+  getLatLng,
+} from 'react-places-autocomplete';
 
-const googleMapURL = `https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=${process.env.REACT_APP_MAPS_API_KEY}`;
+
+const googleMapURL = `https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing,places&key=${process.env.REACT_APP_MAPS_API_KEY}`;
 
 class MapApp extends Component {
   constructor(props) {
@@ -19,6 +25,8 @@ class MapApp extends Component {
       watchID: null,
       lastFetched: null,
       fenceCoords: null,
+      center: null,
+      address: '',
     };
   }
 
@@ -27,7 +35,27 @@ class MapApp extends Component {
   }
   UNSAFE_componentWillUnmount() {
     this.unwatchLocation();
-  }
+  } 
+
+  // search for address
+  handleChange = address => {
+    this.setState({ address });
+  };
+
+  handleSelect = address => {
+    geocodeByAddress(address)
+      .then((results) => getLatLng(results[0]))
+      .then((latLng) =>
+        // console.log(
+        //   "Success",
+        //   latLng, 
+        // )
+        this.setState({
+          center: { lat: latLng.lat, lng: latLng.lng },
+        })
+      )
+      .catch((error) => console.error("Error", error));
+  };
 
   // get fence geo coordinates...modified solution by Chad Killingsworth from stackOverflow
   getFenceCoords(polygon) {
@@ -68,7 +96,7 @@ class MapApp extends Component {
     if ("geolocation" in navigator) {
       const geoOptions = {
         enableHighAccuracy: true,
-        maximumAge: 30000, 
+        maximumAge: 10000, 
         timeout: 27000,
       };
 
@@ -89,6 +117,7 @@ class MapApp extends Component {
   }
 
   getLocation(position) {
+    console.log(position)
     this.setState({
       center: {
         lat: position.coords.latitude,
@@ -97,7 +126,6 @@ class MapApp extends Component {
       content: `Location found.`,
       lastFetched: position.timestamp,
     });
-
     this.checkGeoFence();
   }
 
@@ -143,17 +171,66 @@ class MapApp extends Component {
       this.state.center.lng,
       this.state.center.lat 
     );
-    console.log(currentPosition)
+    // console.log(currentPosition)
     return currentPosition;
   }
 
   render() {
     let map = null;
     let fenceStatus = null;
+    let addressSearch = null;
 
     if (this.state.lastFetched) {
+
+
+      // ADDRESS SEARCH
+
+      addressSearch = (
+        <GooglePlacesAutocomplete
+        apiKey= {process.env.REACT_APP_MAPS_API_KEY}
+        value={this.state.address}
+        onChange={this.handleChange}
+        onSelect={this.handleSelect}
+      >
+        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+          <div>
+            <input
+              {...getInputProps({
+                placeholder: 'Search Places ...',
+                className: 'location-search-input',
+              })}
+            />
+            <div className="autocomplete-dropdown-container">
+              {loading && <div>Loading...</div>}
+              {suggestions.map(suggestion => {
+                const className = suggestion.active
+                  ? 'suggestion-item--active'
+                  : 'suggestion-item';
+                // inline style for demonstration purpose
+                const style = suggestion.active
+                  ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+                  : { backgroundColor: '#ffffff', cursor: 'pointer' };
+                return (
+                  <div
+                    {...getSuggestionItemProps(suggestion, {
+                      className,
+                      style,
+                    })}
+                  >
+                    <span>{suggestion.description}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </GooglePlacesAutocomplete>
+      )
+
+
       map = (
         <div>
+          {addressSearch}
           <p>
             Last fetched:{" "}
             <Moment interval={10000} fromNow>
@@ -180,6 +257,7 @@ class MapApp extends Component {
         {map}
         {fenceStatus}
       </div>
+
     );
   }
 }

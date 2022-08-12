@@ -36,17 +36,10 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			const url = `${process.env.REACT_APP_TIMEKEEPR_API}/client/login`;
-			// let config = {
-			// 	"headers": { 
-			// 		'Content-Type': 'application/json',
-			// 		'Accept': 'application/json',
-			// 		'Authorization': 'Bearer token',
-			// 		'Origin': 'https://timekeepr-admin.herokuapp.com'
-			// 	}
-			// };
 			const { data: res } = await axios.post(url, data)
+			console.log('TOKEN ', res.headers['x-access_token'])
 			localStorage.setItem("token", res.token)
-			navigate("/dashboard");
+			// navigate("/dashboard");
 
 		} catch (error) {
 			if (

@@ -36,8 +36,8 @@ const SignUp = () => {
 			const url = `${process.env.REACT_APP_TIMEKEEPR_API}/client/sign-up`;
 			const { data: res } = await axios.post(url, data)
 
-			navigate("/login");
-			console.log(res.message);
+			// navigate("/login");
+			console.log('signUpSuccess');
 		} catch (error) {
 			if (
 				error.response &&

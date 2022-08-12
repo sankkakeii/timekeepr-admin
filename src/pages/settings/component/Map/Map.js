@@ -9,6 +9,7 @@ export default withScriptjs(withGoogleMap(props => (
     defaultZoom={15}
     center={props.center}
   >
+
     <DrawingManager
       defaultDrawingMode={google.maps.drawing.OverlayType.POLYGON}
       defaultOptions={{
@@ -27,4 +28,5 @@ export default withScriptjs(withGoogleMap(props => (
       <Marker position={props.center} />
     )}
   </GoogleMap>
-)));
+)
+));
